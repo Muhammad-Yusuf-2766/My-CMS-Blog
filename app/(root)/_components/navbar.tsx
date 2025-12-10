@@ -6,12 +6,13 @@ import { cn } from '@/lib/utils'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import GlobalSearch from './global-search'
+import MobileMenu from './mobile'
 
 const Navbar = () => {
 	const pathname = usePathname()
 
 	return (
-		<div className='h-[10vh] backdrop-blur-sm border-b fixed z-40 inset-0 bg-background'>
+		<div className='h-[10vh] backdrop-blur-sm border-b sticky z-40 inset-0 bg-background px-2'>
 			<div className='container max-w-6xl mx-auto h-[10vh] w-full flex items-center justify-between'>
 				{/* Logo */}
 				<Link href='/' className='font-bold text-lg'>
@@ -34,10 +35,10 @@ const Navbar = () => {
 					))}
 				</div>
 
-				{/* Search */}
 				<div className='flex items-center gap-1'>
 					<GlobalSearch />
 					<ModeToggle />
+					<MobileMenu />
 				</div>
 			</div>
 		</div>

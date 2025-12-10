@@ -4,9 +4,9 @@ import Navbar from './_components/navbar'
 
 const Layout = ({ children }: ChildProps) => {
 	return (
-		<main>
+		<main className='px-2'>
 			<Navbar />
-			<div className='container mx-auto px-4'>{children}</div>
+			<div className='container mx-auto'>{children}</div>
 			<Footer />
 		</main>
 	)
